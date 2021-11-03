@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reddit Meme Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- Tutorial Link https://www.youtube.com/watch?v=b1oKDLoAHaI&t=179s -->
+
+
+<body>
+    <div class="top-flex-container">
+
+
+        <div class="grid-box-2 drop-down-box">
+            <label for="image_subreddit">Image subreddit:</label>
+                <select size="1" name="image_subreddit" id="image_subreddit">
+                <option value="art" selected>art</option>
+                <option value="pics">pics</option>
+                <option value="stockimages">stockimages</option>
+                <option value="shittystockphotos">shittystockphotos</option>
+                <option value="earthporn" >earthporn</option>
+                <option value="spaceporn">spaceporn</option>
+                <option value="spaceart">spaceart</option>
+                <option value="gamescreens">gamescreens</option>
+                <option value="analog">analog</option>
+                <option value="pixelart">pixelart</option>
+                <option value="itookapicture">itookapicture</option>
+                <option value="redditgetsdrawn">redditgetsdrawn</option>
+                <option value="memes">memes</option>
+                </select>
+        </div>
+        <div class="grid-box-2 drop-down-box">
+            <label for="quote_subreddit">Quote subreddit:</label>
+                <select name="quote_subreddit" id="quote_subreddit">
+                <option value="quotes" selected>quotes</option>
+                <option value="showerthoughs">showerthoughs</option>
+                <option value="quoteporn">quoteporn</option>
+                <option value="psychology">psychology</option>
+                <option value="philosophy" >philosophy</option>
+                <!-- <option value="foodforthough">foodforthought</option> -->
+                <!-- <option value="youshouldnknow">youshouldknow</option> -->
+                <option value="futurology">futurology</option>
+                <option value="offbeat">offbeat</option>
+                <option value="lifeprotips">lifeprotips</option>
+                </select>
+        </div>
+
+        <h3 class="grid-box-1" id='memeBtn' onClick='fetchDankMemes()'>
+            #Dank Memes
+        </h3>
+    </div>
+<script src="app.js"></script>
+<script src="colorChange.js"></script>
+
+</body>
+</html>

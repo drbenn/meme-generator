@@ -1,0 +1,176 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 10% 90%;
+    overflow: hidden;
+    /* background: #131313; */
+    color: white;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    /* Below this code pen for changing background https://codepen.io/luisangelmaciel/pen/powZgKw */
+    background-color: #f1c40f;
+    -webkit-animation: color 5s ease-in 0s infinite alternate running;
+    -moz-animation: color 5s linear 0s infinite alternate running;
+    animation: color 5s linear 0s infinite alternate running;
+}
+
+    /* Below this code pen for changing background https://codepen.io/luisangelmaciel/pen/powZgKw */
+@-webkit-keyframes color {
+    0% {
+        background-color: #f1c40f;
+    }
+    32% {
+        background-color: #e74c3c;
+    }
+    55% {
+        background-color: #9b59b6;
+    }
+    76% {
+        background-color: #16a085;
+    }
+    100% {
+        background-color: #2ecc71;
+    }
+}
+
+@-moz-keyframes color {
+    0% {
+        background-color: #f1c40f;
+    }
+    32% {
+        background-color: #e74c3c;
+    }
+    55% {
+        background-color: #9b59b6;
+    }
+    76% {
+        background-color: #16a085;
+    }
+    100% {
+        background-color: #2ecc71;
+    }
+}
+
+@keyframes color {
+    0% {
+        background-color: #f1c40f;
+    }
+    32% {
+        background-color: #e74c3c;
+    }
+    55% {
+        background-color: #9b59b6;
+    }
+    76% {
+        background-color: #16a085;
+    }
+    100% {
+        background-color: #2ecc71;
+    }
+}
+
+
+/* End of code pen for changing background */
+
+
+.top-flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-content: center;
+    margin-top: 3rem;
+    font-size: 1.2rem;
+}
+
+/* .grid-box-1 {
+    grid-column: 2 / 3;
+}
+
+.grid-box-2 {
+    grid-column: 3 / 4;
+} */
+
+.drop-down-box {
+    margin: 2rem 5rem;
+}
+#memeBtn {
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 250ms;
+    width: 200px;
+    height: 20px;
+    text-align: center;
+    margin-left: 0%;
+    background: #ffffff;
+    color: #000;
+
+
+}
+
+
+#memeBtn:hover {
+    transform: scale(1.2);
+}
+
+
+#memes {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    overflow: scroll;
+    width: 100%;
+    padding: 10px;
+    margin-left: 10px;
+    margin-top: 6rem;
+    justify-content: center;
+
+}
+
+    #memes div {
+        margin: 10px;
+        padding: 25px 50px;
+        max-width: 250px;
+        text-align: center;
+        background: none;
+        color: #ffffff;
+        border-radius: 8px;
+        transition: 200ms;
+        border: solid rgb(49, 49, 49) 2px;
+        background-color: #18171b;
+
+    }
+
+    #memes div:hover {
+        transform: scale(1.05);
+    }
+
+    #memes div h4 {
+        padding: 5px;
+        text-align:center;
+        background: none;
+        color: #ffffff;
+        border-radius: 8px;
+        margin: 0;
+    }
+
+img {
+    width: 250px;
+    height: 250px;
+    border-radius: 12px;
+    transition: 200ms;
+}
+
+
+    @media only screen and (max-width: 600px) {
+        .top-flex-container {
+            margin-top: 0rem;
+        }
+        #memes {
+            margin-top: 10rem;
+        }
+    }
