@@ -6,17 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reddit Meme Generator</title>
     <link rel="stylesheet" href="style.css">
+    
 </head>
 
 <!-- Tutorial Link https://www.youtube.com/watch?v=b1oKDLoAHaI&t=179s -->
 
 
 <body>
-    <div class="top-flex-container">
+    <div class="top-grid-container">
 
+        <div class="grid-box-1" id='memeBtn' 
+        onClick='fetchDankMemes()'>
+            #Generate Dank Memes
+        </div>
 
         <div class="grid-box-2 drop-down-box">
-            <label for="image_subreddit">Image subreddit:</label>
+            <div class="selection-title">Image Suggestion</div>
+            <label for="image_subreddit"></label>
                 <select size="1" name="image_subreddit" id="image_subreddit">
                 <option value="art" selected>art</option>
                 <option value="pics">pics</option>
@@ -32,29 +38,43 @@
                 <option value="redditgetsdrawn">redditgetsdrawn</option>
                 <option value="memes">memes</option>
                 </select>
+            <div>
+                or
+            </div>
+                <div>
+                    <input type="text" id="image_text_box" placeholder="enter image subreddit">
+                </div>
         </div>
-        <div class="grid-box-2 drop-down-box">
-            <label for="quote_subreddit">Quote subreddit:</label>
+
+
+
+        <div class="grid-box-3 drop-down-box">
+            <div class="selection-title">Title Suggestion</div>
+            <label for="quote_subreddit"></label>
                 <select name="quote_subreddit" id="quote_subreddit">
                 <option value="quotes" selected>quotes</option>
-                <option value="showerthoughs">showerthoughs</option>
+                <option value="showerthoughts">showerthoughts</option>
                 <option value="quoteporn">quoteporn</option>
                 <option value="psychology">psychology</option>
                 <option value="philosophy" >philosophy</option>
-                <!-- <option value="foodforthough">foodforthought</option> -->
-                <!-- <option value="youshouldnknow">youshouldknow</option> -->
                 <option value="futurology">futurology</option>
                 <option value="offbeat">offbeat</option>
                 <option value="lifeprotips">lifeprotips</option>
                 </select>
+            <div>
+                or
+            </div>
+                <div>
+                    <input type="text" id="title_text_box" placeholder="enter title subreddit">
+                </div>
         </div>
 
-        <h3 class="grid-box-1" id='memeBtn' onClick='fetchDankMemes()'>
-            #Dank Memes
-        </h3>
+
+
+
+
     </div>
 <script src="app.js"></script>
-<script src="colorChange.js"></script>
 
 </body>
 </html>

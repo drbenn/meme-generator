@@ -4,11 +4,10 @@ body {
     display: grid;
     grid-template-rows: 10% 90%;
     overflow: hidden;
-    /* background: #131313; */
-    color: white;
+    color: rgb(53, 53, 53);
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
+    
     /* Below this code pen for changing background https://codepen.io/luisangelmaciel/pen/powZgKw */
     background-color: #f1c40f;
     -webkit-animation: color 5s ease-in 0s infinite alternate running;
@@ -75,48 +74,75 @@ body {
 /* End of code pen for changing background */
 
 
-.top-flex-container {
-    display: flex;
-    flex-wrap: wrap;
+.top-grid-container {
+    display: grid;
     width: 100%;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
     grid-template-rows: 1fr;
+    grid-gap: 1rem;
     justify-content: center;
     margin-top: 3rem;
     font-size: 1.2rem;
 }
 
-/* .grid-box-1 {
+.grid-box-1 {
     grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    border: solid 3px rgb(4, 0, 51);
+    box-shadow: 3px 3px 10px #1618b3da;
+    text-align: center;
+    align-items: center;
 }
 
 .grid-box-2 {
     grid-column: 3 / 4;
-} */
+    grid-row: 1 / 2;
+    font-size: 1.2rem;
+    font-weight: 600;
+    /* border: solid 2px red; */
+    text-align: center;
+    align-items: center;
+}
+
+.grid-box-3 {
+    grid-column: 4 / 5;
+    grid-row: 1 / 2;
+    font-size: 1.2rem;
+    font-weight: 600;
+    /* border: solid 2px blue; */
+    text-align: center;
+    align-items: center;
+}
 
 .drop-down-box {
-    margin: 2rem 5rem;
+    margin: 1rem 1.5rem;
 }
+
 #memeBtn {
     padding: 10px;
     cursor: pointer;
     border-radius: 8px;
     transition: 250ms;
     width: 200px;
-    height: 20px;
+    height: 70px;
     text-align: center;
     margin-left: 0%;
     background: #ffffff;
-    color: #000;
-
-
+    color: rgb(39, 39, 39);
+    font-size: 1.5rem;
 }
-
 
 #memeBtn:hover {
     transform: scale(1.2);
 }
 
+input {
+    background-color: rgb(242, 251, 255);
+}
+
+select {
+    background-color: rgb(251, 255, 251);
+}
 
 #memes {
     display: flex;
@@ -128,7 +154,6 @@ body {
     margin-left: 10px;
     margin-top: 6rem;
     justify-content: center;
-
 }
 
     #memes div {
@@ -142,7 +167,6 @@ body {
         transition: 200ms;
         border: solid rgb(49, 49, 49) 2px;
         background-color: #18171b;
-
     }
 
     #memes div:hover {
@@ -166,11 +190,34 @@ img {
 }
 
 
-    @media only screen and (max-width: 600px) {
-        .top-flex-container {
-            margin-top: 0rem;
+    @media only screen and (max-width: 800px) {
+
+        .top-grid-container {
+            margin-top: 0.5rem;
+            grid-template-columns: 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
+            font-size: 1.2rem;
+            margin-left: 10rem;
+        }
+        .grid-box-1 {
+            margin-top: 0rem 0rem 0rem 0rem;
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+
+        }
+        .grid-box-2 {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+        }
+        .grid-box-3 {
+            grid-column: 1 / 2;
+            grid-row: 3 / 4;
+        }
+        .drop-down-box {
+            margin: 0rem 0rem;
         }
         #memes {
-            margin-top: 10rem;
+            margin-top: 16rem;
         }
+
     }
